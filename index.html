@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, min-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Das Ziegenproblem</title>
+</head>
+<body>
+<section id="simulate">
+    <form class="box">
+        <label class="label" for="door-count">Anzahl an Türen:</label>
+        <input class="text-box" type="number" id="door-count" name="doorCount" value="3" min="3" step="1" required>
+        <label class="label" for="simulation-count">Anzahl an Simulationen:</label>
+        <input class="text-box" type="number" id="simulation-count" name="simulationCount" value="10000" min="1" step="1" required>
+        <div class="fast-run">
+            <input type="checkbox" id="fast-run">
+            <label for="fast-run">Schnell Simulieren</label>
+        </div>
+        <button id="start-sim" type="button" onclick="simulateMontyHall()">START</button>
+        <p id="error-box"></p>
+    </form>
+    <div class="box">
+        <h2>Ergebnisse</h2>
+        <p class="label">Tauschen war vorteilhaft:</p>
+        <div class="text-box">
+            <p id="sim-og-better-count">0</p>
+            <div class="text-box-progress"></div>
+        </div>
+        <p class="label">Tauschen war nicht vorteilhaft:</p>
+        <div class="text-box">
+            <p id="sim-og-worse-count">0</p>
+            <div class="text-box-progress"></div>
+        </div>
+        <p class="label">Insgesamt:</p>
+        <div class="text-box">
+            <p id="sim-total-count">0</p>
+            <div class="text-box-progress"></div>
+        </div>
+    </div>
+    <p class="footer-credits">Made for Mathe mPa 2024-2025 by <a href="https://additionalram.com" target="_blank">Taha (AdditionalRAM)</a></p>
+    <p class="footer-credits">2025 Update for Paul Deepak Kavalam - Chris Kelvin Bessambo</p>
+</section>
+<script src="./simulation.js"></script>
+</body>
+</html>
